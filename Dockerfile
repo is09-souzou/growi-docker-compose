@@ -18,10 +18,11 @@ WORKDIR ${APP_DIR}
 # ;;       are now included in the 'weseek/growi' image.
 # ;;       Therefore you will not need following lines except when you install third-party plugins.
 # ;;
-#RUN echo "install plugins" \
-#  && yarn add \
-#      growi-plugin-XXX \
-#      growi-plugin-YYY \
-#  && echo "done."
+RUN echo "install plugins" \
+  && yarn add \
+     growi-plugin-lsx \
+     growi-plugin-pukiwiki-like-linker \
+  && echo "done."
 # you must rebuild if install plugin at least one
-# RUN npm run build:prod
+RUN npm run build:prod
+
